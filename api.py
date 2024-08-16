@@ -14,7 +14,7 @@ def search_movie_by_title(query):
     return []
 
 def get_movie_details(imdbID):
-    url = f"http://www.omdbapi.com/?i={imdbID}&apikey=5a1ad64c"
+    url = f"http://www.omdbapi.com/?i={imdbID}&apikey=YOUR_API_KEY"
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
