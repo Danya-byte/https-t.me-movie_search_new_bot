@@ -5,7 +5,7 @@ translator = GoogleTranslator(source='auto', target='en')
 
 def search_movie_by_title(query):
     translated_query = translator.translate(query)
-    url = f"http://www.omdbapi.com/?s={translated_query}&apikey=5a1ad64c"
+    url = f"http://www.omdbapi.com/?s={translated_query}&apikey=YOUR_API_KEY"
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
